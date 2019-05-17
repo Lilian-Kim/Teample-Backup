@@ -1,0 +1,407 @@
+@CHARSET "UTF-8";
+
+/* 리셋 */
+* {
+	margin: 0;
+	padding: 0;
+/* 	border: 1px solid red;    */
+	text-decoration: none;
+	border-collapse: collapse;
+	outline: none;
+	
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body {
+	box-sizing: border-box;
+	color: #333;
+	font-family: "맑은 고딕";
+}
+
+/* 리셋끝 */
+
+.withname{
+/*  	height:100%;  */
+/* 	overflow:hidden;  */
+/*  	overflow-y:scroll;  */
+}
+
+h2 {
+	width: 80px;
+	height: 20px;
+	font-size: 16px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom:5px;
+}
+
+.price {
+	color: #FF5000;
+	font-weight: bold;
+}
+
+.price2 {
+	color: #FF1804;
+	font-weight: bold;
+}
+
+.bid_tbl1 {
+	font-size: 14px;
+	width: 520px;
+	/* 	height:100%; */
+	/* 	overflow:hidden; */
+	margin-left: 10px;
+}
+
+.bid_tbl1 tr {
+	height: 40px;
+}
+
+.bid_tbl1 td, th {
+	border: 1px solid #A1A1A1;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.bid_tbl1 th {
+	background: #3A4154;
+	color: #fff;
+	font-weight: bold;
+	width: 140px;
+}
+
+.bid_tbl1 td .fc {
+	font-size: 12px;
+	color: #777;
+}
+
+.bid_tbl2 {
+	font-size: 14px;
+	width: 520px;
+	/* 	height:100%; */
+	/* 	overflow:hidden; */
+	margin-left: 10px;
+}
+
+.bid_tbl2 tr {
+	height: 40px;
+}
+
+.bid_tbl2 td, th {
+	border: 1px solid #A1A1A1;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.bid_tbl2 th {
+	background: #3A4154;
+	color: #fff;
+	font-weight: bold;
+	width: 120px;
+}
+
+.bid_tbl2 td {
+	width: 200px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.bid_tbl2 td .fc {
+	font-size: 12px;
+	color: #777;
+}
+
+.bid_tbl2 td input{
+	width:100px;
+	height:25px;
+}
+
+.bid_p {
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 40px;
+	margin-bottom: 10px;
+}
+
+hr {
+	border: 2px solid #FF5000;
+}
+
+.mtxs {
+	width: 83px;
+	height: 28px;
+	margin:0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.mtxs input {
+	width: 83px;
+	height: 28px;
+}
+
+.bottombutton {
+	width: 58px;
+	height: 23px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+
+/*입찰시 popup창*/
+.pt_pop {
+	clear: both;
+	width: 520px;
+}
+
+.po_pop .bid_text {
+	width: 300px;
+	height: 30px;
+}
+
+.ac {
+	width: 200px;
+	height: 35px;
+	margin-left: 180px;
+	margin-top: 20px;
+}
+
+.bid_text1 {
+	width: 450px;
+	height: 20px;
+	margin-left: 85px;
+	font-size: 12px;
+	color: #777;
+}
+
+.bid_text1 .org{
+	color:#FF5000;
+}
+
+.mid {
+	width: 500px;
+	height: 70px;
+	margin-top: 20px;
+	margin-left: 70px;
+}
+
+.mid p {
+	font-size: 12px;
+}
+
+.mid div {
+	font-size: 12px;
+	color: #777;
+}
+
+.mid_img {
+	width: 320px;
+	height: 25px;
+	margin-left: 50px;
+	margin-top: 5px;
+}
+
+.mtxxs_btn {
+	width: 180px;
+	height: 30px;
+	margin-left: 180px;
+	margin-top: 20px;
+}
+
+
+.mtxxs .bid_tbl3 {
+	width: 540px;
+	height: 130px;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.bid_tbl3 th {
+	background: #3A4154;
+	color: #fff;
+	font-weight: bold;
+	width: 120px;
+	font-size: 12px;
+}
+
+.bid_tbl3 td {
+	font-size: 12px;
+}
+
+.mtxxs .bid_tbl3 th, td {
+	border: 1px solid #A1A1A1;
+	text-align: left;
+	padding-left: 5px;
+}
+
+
+.bid_tbl4 {
+	font-size: 14px;
+	width: 540px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom:20px;
+/* 	height:100%; */
+/* 	overflow:hidden; */
+}
+
+.bid_tbl4 td {
+	height: 20px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.bid_tbl4 th {
+	background: #3A4154;
+	color: #fff;
+	font-weight: bold;
+	width: 120px;
+	height: 20px;
+	text-align: center;
+	width: 108px;
+	font-size: 12px;
+}
+
+.bid_tbl4 td:nth-child(2) {
+	width: 108px;
+}
+
+.tview_bottombutton {
+	width: 58px;
+	height: 23px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+
+/*입찰정보 & list창*/
+.bid_tbl5 {
+	width: 540px;
+	height: 130px;
+	margin-left: 10px;
+	margin-top: 5px;
+/* 	margin-bottom: 10px; */
+}
+
+.bid_tbl5 th {
+	background: #3A4154;
+	color: #fff;
+	font-weight: bold;
+	width: 120px;
+	font-size: 12px;
+}
+
+.bid_tbl5 td {
+	font-size: 12px;
+}
+
+.bid_tbl5 th, td {
+	border: 1px solid #A1A1A1;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.bid_tbl6 {
+	font-size: 14px;
+	width: 540px;
+	margin-left: 10px;
+	margin-top: 20px;
+/* 	height:100%; */
+/* 	overflow:hidden; */
+}
+
+.bid_tbl6 td {
+	height: 20px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.bid_tbl6 th {
+	background: #3A4154;
+	color: #fff;
+	font-weight: bold;
+	width: 120px;
+	height: 20px;
+	text-align: center;
+	width: 108px;
+	font-size: 12px;
+}
+
+.bid_tbl6 td:nth-child(2) {
+	width: 108px;
+}
+
+
+/* .paging{
+	margin-bottom:-30px;
+} */
+
+.mtxxs3{
+	width:550px;
+/* 	height:100%; */
+/* 	overflow:hidden; */
+	margin-bottom:10px; 
+}
+
+.tinfo_bottombutton{
+	width: 58px;
+	height: 23px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+/*낙찰중인 상품일때*/
+
+.bid_tblf {
+	width: 540px;
+	height: 130px;
+	margin-left: 10px;
+	margin-top: 5px;
+	/* 	margin-bottom: 10px; */
+}
+
+.bid_tblf th {
+	background: #3A4154;
+	color: #fff;
+	font-weight: bold;
+	width: 120px;
+	font-size: 12px;
+}
+
+.bid_tblf td {
+	font-size: 12px;
+}
+
+.bid_tblf th, td {
+	border: 1px solid #A1A1A1;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.fail_info {
+	color: #FF1804;
+	font-weight: bold;
+/* 	border: 1px solid yellow; */
+	width: 200px;
+	height: 25px;
+	margin: 0 auto;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+.finfo_bottombutton {
+	width: 58px;
+	height: 23px;
+	margin: 0 auto;
+	margin-top: 10px;
+}

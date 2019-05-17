@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>TeamProject</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<resource-ref>
+		<description>Connection</description>
+		<res-ref-name>jdbc/jaturi</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<!-- 쓰레드풀 서블릿 로드 -->
+	<servlet>
+		<servlet-name>ThreadPool</servlet-name>
+		<servlet-class>Engine.ThreadPool</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- 경매종료확인 스레드 서블릿 로드-->
+	<servlet>
+		<servlet-name>Scheduler</servlet-name>
+		<servlet-class>Engine.ThreadEndTimeCheck</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ObjectIdFactory</servlet-name>
+		<servlet-class>Engine.ObjectIdFactory</servlet-class>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>MemberFrontController</servlet-name>
+		<servlet-class>Member.Controller.MemberFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberFrontController</servlet-name>
+		<url-pattern>*.me</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductFrontController</servlet-name>
+		<servlet-class>Product.Controller.ProductFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductFrontController</servlet-name>
+		<url-pattern>*.pro</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TradeListFrontController</servlet-name>
+		<servlet-class>TradeList.Controller.TradeListFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TradeListFrontController</servlet-name>
+		<url-pattern>*.tra</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>MemberBoardFrontController</servlet-name>
+		<servlet-class>MemberBoard.Controller.MemberBoardFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberBoardFrontController</servlet-name>
+		<url-pattern>*.mbo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductBoardFrontController</servlet-name>
+		<servlet-class>ProductBoard.Controller.ProductBoardFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductBoardFrontController</servlet-name>
+		<url-pattern>*.pbo</url-pattern>
+	</servlet-mapping>
+</web-app>
